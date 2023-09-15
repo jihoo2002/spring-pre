@@ -1,2 +1,21 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<qualifiedTypeNameHistroy/>
+<qualifiedTypeNameHistroy>
+    <fullyQualifiedTypeName name="lombok.ToString"/>
+    <fullyQualifiedTypeName name="lombok.Getter"/>
+    <fullyQualifiedTypeName name="lombok.EqualsAndHashCode"/>
+    <fullyQualifiedTypeName name="core.chap1.FrenchCourse"/>
+    <fullyQualifiedTypeName name="java.lang.Override"/>
+    <fullyQualifiedTypeName name="core.chap1.AsianRestaurant"/>
+    <fullyQualifiedTypeName name="core.chap1.SushiCourse"/>
+    <fullyQualifiedTypeName name="core.chap1.WesternRestaurant"/>
+    <fullyQualifiedTypeName name="core.chap1.AsianChef"/>
+    <fullyQualifiedTypeName name="core.chap1.FrenchChef"/>
+    <fullyQualifiedTypeName name="org.springframework.aop.framework.adapter.AdvisorAdapterRegistrationManager"/>
+    <fullyQualifiedTypeName name="lombok.Setter"/>
+    <fullyQualifiedTypeName name="lombok.AllArgsConstructor"/>
+    <fullyQualifiedTypeName name="lombok.NoArgsConstructor"/>
+    <fullyQualifiedTypeName name="org.springframework.context.support.GenericXmlApplicationContext"/>
+    <fullyQualifiedTypeName name="core.chap1.Hotel"/>
+    <fullyQualifiedTypeName name="org.springframework.beans.factory.annotation.Autowired"/>
+    <fullyQualifiedTypeName name="org.springframework.beans.factory.annotation.Qualifier"/>
+</qualifiedTypeNameHistroy>

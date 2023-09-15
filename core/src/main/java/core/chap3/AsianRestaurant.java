@@ -37,7 +37,7 @@ public class AsianRestaurant implements Restaurant {
     어떤 빈을 주입해야 하는 지 선택해 주는 추가 아노테이션 입니다.
     */
 	
-	@Autowired //spring 컨테이너에서 필요한 값들을 넣어줌
+	//@Autowired => spring 컨테이너에서 필요한 값들을 넣어줌
 	
 	
 //	
