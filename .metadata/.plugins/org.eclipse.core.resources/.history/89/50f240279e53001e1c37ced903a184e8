@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"  
+xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+xmlns:context="http://www.springframework.org/schema/context"
+xsi:schemaLocation="http://www.springframework.org/schema/beans  
+http://www.springframework.org/schema/beans/spring-beans.xsd
+http://www.springframework.org/schema/context 
+http://www.springframework.org/schema/context/spring-context-4.3.xsd">
+
+	<!-- 자동 스캔 명령 추가 -->
+	<context:annotation-config/>
+	
+	<bean id= "hotel1" class = "core.chap2.Hotel" />
+		
+	
+	<!-- 호텔 객체를 만들어 쉐프와 레스토랑 정보를 아시안으로 맞춰줌 -->
+	<bean id= "asianRes" class = "core.chap2.AsianRestaurant"/>
+	
+	
+	
+	<bean id= "sushi" class = "core.chap2.SushiCourse"/>
+	<bean id= "asianChef" class = "core.chap2.AsianChef"/>
+	
+	<!-- ============================================-->
+	
+	<bean id = "hotel2" class ="core.chap2.Hotel"/>
+	
+	
+	
+	<bean id = "western" class = "core.chap2.WesternRestaurant"/>
+		
+	
+	
+	
+	<bean id = "FrenchChef" class = "core.chap2.FrenchChef"/>
+	<bean id = "FrenchCourse" class = "core.chap2.FrenchCourse"/>
+	
+	
+	
+
+</beans>
+
+
+
+
+
+
+

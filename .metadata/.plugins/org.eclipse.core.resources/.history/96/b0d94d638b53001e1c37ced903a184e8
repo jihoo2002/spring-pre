@@ -1,0 +1,6 @@
+package core.chap1;
+
+public interface Course {
+		
+	void combineMenu();
+}

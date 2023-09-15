@@ -1,0 +1,5 @@
+package core.person;
+
+public class Person {
+
+}

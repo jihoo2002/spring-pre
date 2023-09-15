@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"  
+xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+xmlns:context="http://www.springframework.org/schema/context"
+xsi:schemaLocation="http://www.springframework.org/schema/beans  
+http://www.springframework.org/schema/beans/spring-beans.xsd
+http://www.springframework.org/schema/context 
+http://www.springframework.org/schema/context/spring-context-4.3.xsd">
+
+	<!-- 자동 스캔 명령 추가 -->
+	<context:annotation-config/>
+	
+	<bean id= "hotel1" class = "core.chap2.Hotel" >
+		<property name="headChef" ref= "asianChef"/>
+		<property name="restaurant" ref= "asianRes"/>
+	</bean>
+	<!-- 호텔 객체를 만들어 쉐프와 레스토랑 정보를 아시안으로 맞춰줌 -->
+	<bean id= "asianRes" class = "core.chap2.AsianRestaurant">
+	<property name="chef" ref = "asianChef"/>
+	<property name="course" ref="sushi"/>
+	
+	</bean>
+	<bean id= "sushi" class = "core.chap2.SushiCourse"/>
+	<bean id= "asianChef" class = "core.chap2.AsianChef"/>
+	
+	<!-- ====================================-->
+	
+	<bean id = "hotel2" class ="core.chap2.Hotel">
+	<constructor-arg ref = "western"/> <!-- 생성자 값 전달 | 레스토랑 정보 -->
+	<constructor-arg ref = "FrenchChef"/> <!-- 헤드 쉐프 정보 -->
+	</bean>
+	
+	<bean id = "western" class = "core.chap2.WesternRestaurant">
+		<constructor-arg ref = "FrenchChef"/> 
+		<constructor-arg ref = "FrenchCourse"/> 
+		<!-- 생성자 매개값 순서랑 맞게 전달해야함  -->
+	
+	</bean>
+	
+	<bean id = "FrenchChef" class = "core.chap2.FrenchChef"/>
+	<bean id = "FrenchCourse" class = "core.chap2.FrenchCourse"/>
+	
+	
+	
+
+</beans>
+
+
+
+
+
+
+
