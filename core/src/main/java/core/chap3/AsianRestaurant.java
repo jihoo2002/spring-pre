@@ -9,7 +9,7 @@ import lombok.Setter;
 public class AsianRestaurant implements Restaurant {
 			//레스토랑은 두가지 객체에 의존하고 있다.
 			//두가지 객체가 없으면 안됨(의존적 관계)
-	@Autowired
+	@Autowired //객체 자동 주입 , 동일 타입의 변수
 	@Qualifier("asianChef")
 	private Chef chef;
 	
@@ -18,13 +18,7 @@ public class AsianRestaurant implements Restaurant {
 	@Qualifier("sushi")
 	private Course course;
 	
-//	public void setChef(Chef chef) {
-//		this.chef = chef;
-//	}
-//	
-//	public void setCourse(Course course) {
-//		this.course = course;
-//	}
+
 	/*
     # @Autowired
     - 객체를 자동 주입할 때 사용하는 아노테이션입니다.
@@ -37,10 +31,8 @@ public class AsianRestaurant implements Restaurant {
     어떤 빈을 주입해야 하는 지 선택해 주는 추가 아노테이션 입니다.
     */
 	
-	//@Autowired => spring 컨테이너에서 필요한 값들을 넣어줌
-	
-	
-//	
+	//생성자 주입
+ 	//@Autowired 
 //	public AsianRestaurant(@Qualifier("asianChef")Chef chef, @Qualifier("sushi")Course course) {
 //		super();
 //		this.chef = chef;

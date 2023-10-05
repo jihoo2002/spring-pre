@@ -9,27 +9,32 @@ http://www.springframework.org/schema/beans/spring-beans.xsd">
 	<bean id= "hotel1" class = "core.chap2.Hotel" >
 		<property name="headChef" ref= "asianChef"/> <!-- core.chap2.AsianChef -->
 		<property name="restaurant" ref= "asianRes"/> <!-- core.chap2.AsianRestaurant -->
+	<!-- headChef, restaurant 는 set의 값임.
+	property자체가 setter메서드를 통한 주입을 하기 위해 존재.  -->
 	</bean>
+	
 	<!-- 호텔 객체를 만들어 쉐프와 레스토랑 정보를 아시안으로 맞춰줌 -->
 	<bean id= "asianRes" class = "core.chap2.AsianRestaurant">
 	<property name="chef" ref = "asianChef"/>
 	<property name="course" ref="sushi"/>
 	
 	</bean>
+	
 	<bean id= "sushi" class = "core.chap2.SushiCourse"/>
 	<bean id= "asianChef" class = "core.chap2.AsianChef"/>
 	
-	<!-- ============================-->
+	<!-- =========================================-->
 	
 	<bean id = "hotel2" class ="core.chap2.Hotel">
-	<constructor-arg ref = "western"/> <!-- 생성자 값 전달 | 레스토랑 정보 -->
-	<constructor-arg ref = "FrenchChef"/> <!-- 헤드 쉐프 정보 -->
+	<constructor-arg ref = "western"/><!-- 생성자 값 전달 | 레스토랑 정보 -->
+	<constructor-arg ref = "FrenchChef"/><!-- 헤드 쉐프 정보 -->
 	</bean>
 	
 	<bean id = "western" class = "core.chap2.WesternRestaurant">
 		<constructor-arg ref = "FrenchChef"/> 
 		<constructor-arg ref = "FrenchCourse"/> 
-		<!-- 생성자 매개값 순서랑 맞게 전달해야함  -->
+		<!-- 생성자 매개값 순서랑 맞게 전달해야함
+		constructor-arg-> 생성자의 매개값 전달하는 것임.  -->
 	
 	</bean>
 	
